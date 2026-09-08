@@ -7,7 +7,6 @@
 
   var step1  = document.getElementById('cpStep1');
   if (!step1) return;
-  var roleBox = document.getElementById('cpRole');
   var identBox = document.getElementById('cpIdent');
   var namedBlock = document.getElementById('cpNamedBlock');
   var anonNote = document.getElementById('cpAnonNote');
@@ -17,7 +16,10 @@
   var sendBtn = document.getElementById('cpSend');
   var done = document.getElementById('cpDone');
 
-  var role = roleBox.querySelector('[aria-pressed="true"]').dataset.v;
+  /* This page is the customer route; staff have their own page, so the role
+     is fixed rather than asked. The field still travels so the column in the
+     responses sheet stays consistent with earlier submissions. */
+  var role = t('Customer', 'عميل');
   var ident = 'named';
 
   function wireSeg(box, onPick) {
@@ -29,8 +31,6 @@
       onPick(b.dataset.v);
     });
   }
-
-  wireSeg(roleBox, function (v) { role = v; });
 
   wireSeg(identBox, function (v) {
     ident = v;
