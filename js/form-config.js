@@ -57,6 +57,23 @@ window.ES_FORMS = {
       contact:  '',                 // Blank when anonymous
       lang:     ''
     }
+  },
+
+  grievance: {
+    formId: '',
+    entries: {
+      refCode:  '',                 // Reference code we generate
+      role:     '',                 // Employee / Contractor or daily worker / Former employee
+      dept:     '',                 // Site, department or team
+      category: '',                 // Unfair treatment / Pay, hours... / Harassment...
+      details:  '',                 // What happened
+      outcome:  '',                 // What would put it right
+      raised:   '',                 // Not yet / With my line manager / With HR or management
+      place:    '',                 // Where and when
+      name:     '',                 // Blank when anonymous
+      contact:  '',                 // Blank when anonymous
+      lang:     ''
+    }
   }
 
 };
