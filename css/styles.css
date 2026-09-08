@@ -1923,6 +1923,13 @@ input, textarea, select {
 .tool__notice.show { display: flex; }
 .tool__notice i { color: #b9791b; margin-top: 3px; }
 
+/* Calm variant: standing reassurance, not a warning. */
+.tool__notice--calm {
+  background: rgba(27,42,74,.05);
+  border-color: var(--clr-border);
+}
+.tool__notice--calm i { color: var(--clr-primary); }
+
 /* Honeypot: never visible to a person, catches naive bots.
    Must not use a large negative offset - in an RTL document that becomes real
    scrollable overflow and drags the whole page sideways. Clip instead. */
